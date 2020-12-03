@@ -20,7 +20,12 @@ public class plainText implements textParser{
     @Override
     public String convertText(String text) {
         String ret = "";
-        
+        int l = text.length();
+        for(int i = 0; i<l; i++){
+            ret=ret.concat(
+                    Integer.toBinaryString(text.charAt(i)));
+            ret=ret.concat(" ");
+        }
         return ret;
     }
     
