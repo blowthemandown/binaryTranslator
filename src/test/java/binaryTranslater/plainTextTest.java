@@ -41,7 +41,14 @@ public class plainTextTest {
     @Test
     public void shouldDisplay01100110(){
         String testVal = Integer.toBinaryString('f');
-        assertEquals("01100110", testVal);
+        assertEquals("01100110", testVal);//fails, returns 1100110 without the leading 0
+    }
+    //are ALL of these returns just seven digits?
+    
+    @Test
+    public void shouldDisplay0110111(){
+        String testVal = Integer.toBinaryString('7');
+        assertEquals("0110111", testVal);
     }
     
 }
