@@ -12,8 +12,9 @@ package binaryTranslater;
 public class binaryText implements textParser {
     //String text;  well, maybe
     
-    //constructor
+    public binaryText(){}
     
+    @Override
     public boolean isValid(String text){//should also check if the string is broken up into 8-bit 'words' or if it's all one chunk - by checking for spaces at position 8, 16 etc
         for(int i = 0; i<text.length(); i++){
             if(text.charAt(i)!='1'&&text.charAt(i)!='0')return false;
@@ -22,6 +23,7 @@ public class binaryText implements textParser {
         return true;
     }
     
+    @Override
     public String convertText(String text){
         String s = "";
         //put in a loop after breaking up the text string
