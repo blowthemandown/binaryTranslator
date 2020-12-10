@@ -10,6 +10,8 @@ package binaryTranslater;
  * @author james
  */
 public class plainText implements textParser{
+    
+    public plainText(){}
 
     @Override
     public boolean isValid(String text) {
