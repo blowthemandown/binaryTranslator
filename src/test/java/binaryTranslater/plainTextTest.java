@@ -40,15 +40,19 @@ public class plainTextTest {
     */
     @Test
     public void shouldDisplay01100110(){
-        String testVal = Integer.toBinaryString('f');
-        assertEquals("01100110", testVal);//fails, returns 1100110 without the leading 0
+        String testVal;
+        //testVal= Integer.toBinaryString('f');//fails, returns 1100110 without the leading 0
+        testVal = String.format("%8s", Integer.toBinaryString('f')).replace(' ', '0');
+        assertEquals("01100110", testVal);
     }
-    //are ALL of these returns just seven digits?
     
+    /*
+    This is another test of the basic functions, with more than one leading zero
+    */
     @Test
-    public void shouldDisplay0110111(){
-        String testVal = Integer.toBinaryString('7');
-        assertEquals("0110111", testVal);
+    public void shouldDisplay00110111(){
+        String testVal = String.format("%8s", Integer.toBinaryString('7')).replace(' ', '0');//leads with two spaces before the replace
+        assertEquals("00110111", testVal);
     }
     
 }
