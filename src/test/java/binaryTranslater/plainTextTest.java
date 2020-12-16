@@ -56,11 +56,11 @@ public class plainTextTest {
     }
     
     /*
-    This tests the doChar method that condences the above
+    This tests the doChar method that condences the above.  The character 2 should be 00110010.
     */
     @Test
     public void shouldDisplay00110010(){
-        assertEquals("00110010",pt.doChar('1'));
+        assertEquals("00110010",pt.doChar('2'));
     }
     
 }
