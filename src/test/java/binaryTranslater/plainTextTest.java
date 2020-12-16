@@ -55,4 +55,12 @@ public class plainTextTest {
         assertEquals("00110111", testVal);
     }
     
+    /*
+    This tests the doChar method that condences the above
+    */
+    @Test
+    public void shouldDisplay00110010(){
+        assertEquals("00110010",pt.doChar('1'));
+    }
+    
 }
