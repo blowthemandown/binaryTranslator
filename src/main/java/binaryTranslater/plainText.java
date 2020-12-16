@@ -32,7 +32,7 @@ public class plainText implements textParser{
     }
     
     public String doChar(char c){
-        return "";
+        return String.format("%8s", Integer.toBinaryString(c)).replace(' ', '0');
     }
     
 }
