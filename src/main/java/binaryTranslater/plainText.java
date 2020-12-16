@@ -31,4 +31,8 @@ public class plainText implements textParser{
         return ret;
     }
     
+    public String doChar(char c){
+        return "";
+    }
+    
 }
