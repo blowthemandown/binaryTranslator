@@ -63,4 +63,11 @@ public class plainTextTest {
         assertEquals("00110010",pt.doChar('2'));
     }
     
+    /*
+    Now we get to it.  The string "it" should return "01101001 01110100 "
+    */
+    @Test
+    public void shouldDisplay01101001_01110100(){
+        assertEquals("01101001 01110100 ",pt.convertText("it"));
+    }
 }
