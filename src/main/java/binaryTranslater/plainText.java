@@ -25,7 +25,7 @@ public class plainText implements textParser{
         int l = text.length();
         for(int i = 0; i<l; i++){
             ret=ret.concat(
-                    Integer.toBinaryString(text.charAt(i)));
+                    doChar(text.charAt(i)));
             ret=ret.concat(" ");
         }
         return ret;
