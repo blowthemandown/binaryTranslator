@@ -30,4 +30,12 @@ public class binaryTextTest {
     
     @After
     public void tearDown() throws Exception {}
+    
+    /*
+    01111000 should be "x"
+    */
+    @Test
+    public void shouldDisplayx(){
+        assertEquals("x", bt.convertText("01111000"));
+    }
 }
