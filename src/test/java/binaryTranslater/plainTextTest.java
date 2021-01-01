@@ -70,4 +70,12 @@ public class plainTextTest {
     public void shouldDisplay01101001_01110100(){
         assertEquals("01101001 01110100 ",pt.convertText("it"));
     }
+    
+    /*
+    The string "help" should return "01101000 01100101 01101100 01110000 "
+    */
+    @Test
+    public void shouldDisplay01101000_01100101_01101100_01110000(){
+        assertEquals("01101000 01100101 01101100 01110000 ", pt.convertText("help"));
+    }
 }
