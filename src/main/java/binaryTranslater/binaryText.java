@@ -25,7 +25,7 @@ public class binaryText implements textParser {
     
     @Override
     public String convertText(String text){
-        String s = "";
+        String s = "x";
         //put in a loop after breaking up the text string
         int parseInt = Integer.parseInt(text, 2);
         char c = (char)parseInt;
