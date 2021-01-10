@@ -25,11 +25,12 @@ public class binaryText implements textParser {
     
     @Override
     public String convertText(String text){
-        String s = "x";
+        String s;
         //put in a loop after breaking up the text string
         int parseInt = Integer.parseInt(text, 2);
         char c = (char)parseInt;
-        //s+=c
+        Character ch = c;
+        s = ch.toString();
         return s;
     }
 }
