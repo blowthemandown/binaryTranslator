@@ -38,4 +38,12 @@ public class binaryTextTest {
     public void shouldDisplayx(){
         assertEquals("x", bt.convertText("01111000"));
     }
+    
+    /*
+    01010100 should be "T"
+    */
+    @Test
+    public void shouldDisplayT(){
+        assertEquals("T", bt.convertText("01010100"));
+    }
 }
