@@ -52,6 +52,6 @@ public class binaryTextTest {
     */
     @Test
     public void shouldDisplayBye(){
-        assertEquals("Bye", bt.convertText("01100010 01111001 01100101"));
+        assertEquals("Bye", bt.convertText("01000010 01111001 01100101"));
     }
 }
