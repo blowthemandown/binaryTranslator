@@ -22,12 +22,40 @@ public class Main {
         String user_input_string;
         Scanner input = new Scanner(System.in);
         boolean cont = true;
+        char kind;
+        textImpl ti;
         
         while(cont){
-            System.out.println("Enter 1 for a binary string to translate, b for a text string, or q to quit");
+            System.out.println("Enter 1 for a binary string to translate, b for a plain text string, or q to quit");
             user_input_string = input.nextLine();
             
-            if(user_input_string.equals("q"))cont=false;
+
+            
+            switch(user_input_string){
+                case "q":
+                    cont = false;
+                    break;
+                case "1":
+                    kind = 'b';
+                    System.out.println("Enter the binary string, with spaces between chars");
+                    user_input_string = input.nextLine();
+                    
+                    ti = new textImpl(user_input_string,kind);
+                    ti.convertText();
+                    System.out.println(ti.getText());
+                    break;
+                case "b":
+                    kind = 'p';
+                    System.out.println("Enter the string");
+                    user_input_string = input.nextLine();
+                    ti = new textImpl(user_input_string,kind);
+                    ti.convertText();
+                    System.out.println(ti.getText());
+                    break;
+                default:
+                    System.out.println("Invalid input");
+                    
+            }
         }
     }
     
