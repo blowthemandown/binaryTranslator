@@ -62,4 +62,11 @@ public class binaryTextTest {
     public void _01100010ShouldPass(){
         assert(bt.isValid("01100010"));
     }
+    /*
+    fail shouldn't pass
+    */
+    @Test
+    public void failShouldntPass(){
+        assert(!bt.isValid("fail"));
+    }
 }
