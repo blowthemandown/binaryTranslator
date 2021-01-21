@@ -13,7 +13,7 @@ public class textImpl implements Text{
 
     String text;
     char kind;
-    //textParser tp; maybe not
+    textParser tp;
     
     public textImpl(String t, char k){
         this.text = t;
@@ -38,7 +38,19 @@ public class textImpl implements Text{
     }
     
     public String convertText(){
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(kind == 'b'){
+            tp = new binaryText();
+            kind = 'p';
+        } else if(kind=='p') {
+            tp = new plainText();
+            kind = 'b';
+        } else{
+            //throw an exception
+        }
+        text = tp.convertText(text);
+        
+        return text;
     }
     
 }
