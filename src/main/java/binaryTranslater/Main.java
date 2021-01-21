@@ -5,6 +5,8 @@
  */
 package binaryTranslater;
 
+import java.util.Scanner;
+
 /**
  *
  * @author james
@@ -16,6 +18,17 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        String user_input_string;
+        Scanner input = new Scanner(System.in);
+        boolean cont = true;
+        
+        while(cont){
+            System.out.println("Enter 1 for a binary string to translate, b for a text string, or q to quit");
+            user_input_string = input.nextLine();
+            
+            if(user_input_string.equals("q"))cont=false;
+        }
     }
     
 }
