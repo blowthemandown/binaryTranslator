@@ -16,7 +16,9 @@ public class binaryText implements textParser {
     
     @Override
     public boolean isValid(String text){//should also check if the string is broken up into 8-bit 'words' or if it's all one chunk - by checking for spaces at position 8, 16 etc
-        for(int i = 0; i<text.length(); i++){
+    	int len = text.length() % 9;
+        if(len!=8&&len!=0)return false;
+    	for(int i = 0; i<text.length(); i++){
             if(i%9==8){
                 if(text.charAt(i)!=' ')return false;
             } else {
@@ -31,6 +33,10 @@ public class binaryText implements textParser {
     public String convertText(String text){
         String s="";
         String temp;
+        
+        if(!isValid(text)) {
+        	return "not a valid binary string";
+        }
         
         String chars[] = text.split(" ");
         //System.out.print(chars);

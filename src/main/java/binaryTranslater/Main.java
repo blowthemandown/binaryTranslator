@@ -37,7 +37,7 @@ public class Main {
                     break;
                 case "1":
                     kind = 'b';
-                    System.out.println("Enter the binary string, with spaces between chars");
+                    System.out.println("Enter the binary string, with spaces between chars, and leading zeroes to make each char eight bits");
                     user_input_string = input.nextLine();
                     
                     ti = new textImpl(user_input_string,kind);
