@@ -23,7 +23,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         boolean cont = true;
         char kind;
-        textImpl ti;
+        Text ti;
         
         while(cont){
             System.out.println("Enter 1 for a binary string to translate, b for a plain text string, or q to quit");

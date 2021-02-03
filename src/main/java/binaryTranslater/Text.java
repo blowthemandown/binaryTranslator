@@ -11,6 +11,7 @@ package binaryTranslater;
  */
 public interface Text {
     String getText();
+    String convertText();
     void setText(String s);
     void printText();
 }
